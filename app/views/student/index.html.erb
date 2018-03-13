@@ -2,7 +2,9 @@
 <div class="row">
 <div class="col-sm-6"> 
 <div class="container">
-    <span style="font-size:20px">Students List</span>
+
+    <span style="font-size:20px">Students List</span><br>
+    <%= link_to 'New Record',student_new_path %>
     <table class="table">
          <thead>
             <tr>
@@ -19,6 +21,7 @@
                 <td><%= s.lastname %></td>
                 <td><%= link_to 'Edit',edit_student_path(s)%></td>
                 <td><%= link_to 'view',student_path(s) %></td>
+                <td><%= link_to 'delete',destroy_student_path(s) ,method: :delete,data: { confirm: 'Are you sure?' }%></td>
             </tr>
             
             <%end%>

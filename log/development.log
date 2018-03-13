@@ -8875,3 +8875,303 @@ Processing by StudentController#edit as HTML
 Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.1ms)
 
 
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:41:37 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 34ms (Views: 31.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/student/1" for 127.0.0.1 at 2018-03-13 18:41:40 +0530
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering student/show.html.erb within layouts/application
+  Rendered student/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/student/1" for 127.0.0.1 at 2018-03-13 18:41:46 +0530
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering student/show.html.erb within layouts/application
+  Rendered student/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 35ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/student/1" for 127.0.0.1 at 2018-03-13 18:43:27 +0530
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering student/show.html.erb within layouts/application
+  Rendered student/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:43:28 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 31ms (Views: 29.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/student/1" for 127.0.0.1 at 2018-03-13 18:43:29 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wFts+k2II+i9e514WlGGNFNAlu2bTqFlJJxOs2dJ5HRBhkCvRqg1nhL60iSC+S7LxQGtfbUcYrRZWQAg3yf2/Q==", "id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 1]]
+  [1m[35m (112.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000student/index
+Completed 302 Found in 116ms (ActiveRecord: 112.7ms)
+
+
+Started GET "/student/1" for 127.0.0.1 at 2018-03-13 18:44:07 +0530
+Processing by StudentController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 12ms (ActiveRecord: 1.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=1):
+  
+app/controllers/student_controller.rb:14:in `show'
+Started DELETE "/student/1" for 127.0.0.1 at 2018-03-13 18:44:20 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wFts+k2II+i9e514WlGGNFNAlu2bTqFlJJxOs2dJ5HRBhkCvRqg1nhL60iSC+S7LxQGtfbUcYrRZWQAg3yf2/Q==", "id"=>"1"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Student with 'id'=1):
+  
+app/controllers/student_controller.rb:45:in `destroy'
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:44:47 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/student/3" for 127.0.0.1 at 2018-03-13 18:44:48 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"tDbEr13K0M8sQ/daf31gdAmGKyxcuGNyrpXg3l6siiM16+j6VurGuYPCuAan1ciLn8cQvHLqoKPTUK5N5sKYqg==", "id"=>"3"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 3]]
+  [1m[35m (118.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/student/index
+Completed 302 Found in 122ms (ActiveRecord: 118.8ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:44:48 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/student/4" for 127.0.0.1 at 2018-03-13 18:44:50 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3c8sTgR/0bCqxPnBM48q0SD9Lq23amPLPJpFv0D22wBcEgAbD1/HxgVFtp3rJ4IutrwVPZk4oBpBXwss+JjJiQ==", "id"=>"4"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 4]]
+  [1m[35m (110.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/student/index
+Completed 302 Found in 114ms (ActiveRecord: 110.7ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:44:50 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 36ms (Views: 34.0ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/student/2" for 127.0.0.1 at 2018-03-13 18:44:55 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"X1vIqs/RRdNjMbw3rljAFONWYY4yf9iw8HvQQaYRvhXehuT/xPFTpcyw82t28GjrdRdaHhwtG2GNvp7SHn+snA==", "id"=>"2"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 2]]
+  [1m[35m (84.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/student/index
+Completed 302 Found in 92ms (ActiveRecord: 85.3ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:44:55 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/student/5" for 127.0.0.1 at 2018-03-13 18:44:57 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"eGSdDSSGFtaxchdHDtrKNp79Zq7T1I/Z0lKyl2CFY135ubFYL6YAoB7zWBvWcmLJCLxdPv2GTAivl/wE2Otx1A==", "id"=>"5"}
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 5]]
+  [1m[35m (85.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/student/index
+Completed 302 Found in 91ms (ActiveRecord: 86.9ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:44:57 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/student/6" for 127.0.0.1 at 2018-03-13 18:45:00 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"K2jBlRIjF69WzGO6VXICATE4Gnx3SW1clKCWzVY4DoKqte3AGQMB2flNLOaN2qr+p3kh7Fkbro3pZdhe7lYcCw==", "id"=>"6"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 6]]
+  [1m[35m (132.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/student/index
+Completed 302 Found in 136ms (ActiveRecord: 132.6ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:45:01 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:45:29 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 29ms (Views: 26.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "/student/7" for 127.0.0.1 at 2018-03-13 18:45:32 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"d01fZOBm6uePgAxTjSd6kUoCPz+unmve4ZL2TuXm11n2kHMx60b8kSABQw9Vj9Ju3EMEr4DMqA+cV7jdXYjF0A==", "id"=>"7"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 7]]
+  [1m[35m (212.7ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/student/index
+Completed 302 Found in 227ms (ActiveRecord: 214.1ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:45:32 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/student/8" for 127.0.0.1 at 2018-03-13 18:45:35 +0530
+Processing by StudentController#destroy as HTML
+  Parameters: {"authenticity_token"=>"WFvJsBf9n3yvJW7tcCMX3/QvC4s+0kEd+mmSdXrnhffZhuXlHN2JCgCkIbGoi78gYm4wGxCAgsyHrNzmwomXfg==", "id"=>"8"}
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT  "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "students" WHERE "students"."id" = ?[0m  [["id", 8]]
+  [1m[35m (118.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/student/index
+Completed 302 Found in 122ms (ActiveRecord: 118.9ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:45:35 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:46:49 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/student/new" for 127.0.0.1 at 2018-03-13 18:46:51 +0530
+Processing by StudentController#new as HTML
+  Rendering student/new.html.erb within layouts/application
+  Rendered student/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/new" for 127.0.0.1 at 2018-03-13 18:47:08 +0530
+Processing by StudentController#new as HTML
+  Rendering student/new.html.erb within layouts/application
+  Rendered student/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:47:09 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 33ms (Views: 31.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:47:53 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:48:02 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/student/new" for 127.0.0.1 at 2018-03-13 18:48:04 +0530
+Processing by StudentController#new as HTML
+  Rendering student/new.html.erb within layouts/application
+  Rendered student/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/new" for 127.0.0.1 at 2018-03-13 18:48:31 +0530
+Processing by StudentController#new as HTML
+  Rendering student/new.html.erb within layouts/application
+  Rendered student/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 48ms (Views: 46.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/new" for 127.0.0.1 at 2018-03-13 18:48:44 +0530
+Processing by StudentController#new as HTML
+  Rendering student/new.html.erb within layouts/application
+  Rendered student/new.html.erb within layouts/application (17.7ms)
+Completed 200 OK in 41ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/student/index" for 127.0.0.1 at 2018-03-13 18:48:46 +0530
+Processing by StudentController#index as HTML
+  Rendering student/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  Rendered student/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+

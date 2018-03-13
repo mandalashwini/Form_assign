@@ -40,6 +40,12 @@ end
 def edit
 	@student=Student.find(params[:id])
 end
+
+def destroy
+    @student=Student.find(params[:id])
+    @student.destroy
+    redirect_to '/student/index'
+end
  
 private
   def student_params

@@ -3,7 +3,7 @@ class StudentController < ApplicationController
 
 	def new
          @student = Student.new
-            puts "nnnn"
+           
     end
     
 	def index
@@ -15,15 +15,12 @@ class StudentController < ApplicationController
 	end
 
 	def create
-		 #render plain: params[:student].inspect
+		 
 		 @student = Student.new(student_params)
  
          if @student.save
-            puts "iii"
-              redirect_to @student
-            
+             redirect_to @student
         else
-            puts "ooo"
             render 'new'
       end	
 end

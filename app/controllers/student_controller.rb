@@ -11,7 +11,7 @@ class StudentController < ApplicationController
 	end
 
 	def show
-		@student = Student.find(1)
+		@student = Student.find(params[:id])
 	end
 
 	def create
@@ -20,12 +20,21 @@ class StudentController < ApplicationController
  
          if @student.save
             puts "iii"
-              redirect_to '/student/show'
+              redirect_to @student
             
         else
             puts "ooo"
             render 'new'
       end	
+end
+def update
+    @student=Student.find(params[:id])
+    if @student.update(student_params)
+        redirect_to @student
+    else
+        render 'edit'
+    end
+    
 end
 
 def edit

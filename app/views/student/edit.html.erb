@@ -5,7 +5,7 @@
     <div class="card-content black-text">
       <span class="card-title">Edit form</span>
       
-    <%= form_for :student, url: students_path(@student) do |f| %>
+      <%= form_for(@student,url:update_student_path,:method=> "put") do |f| %>
                          
          <% if @student.errors.any? %>
             <div id="error_explanation">

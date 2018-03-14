@@ -1,3 +1,11 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+ input[type=text], input[type=password],input[type=email],input[type=date] ,input[type=tel]{
+    width: 70%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    
+    box-sizing: border-box;
+}
